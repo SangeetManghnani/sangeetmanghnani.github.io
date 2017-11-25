@@ -12,8 +12,8 @@ body {
     padding: 5rem;
 }
 
-.intro-section span {
-    display: flex;
+.intro-section div {
+    display: -webkit-inline-box;
 }
 
 h2 {
