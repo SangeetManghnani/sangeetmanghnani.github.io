@@ -11,29 +11,37 @@
 // }
 body {
     height: 100%;
-    background: #D9B310;
+    // background: #D9B310;
 }
 
 .intro-section {
     padding: 5rem;
+    background-image: url('../assets/images/portfolio-developer.png');
+    background-position-x: right;
+    background-repeat: no-repeat;
+    background-size: 55%;
+    // #hi-text {
+    //     font-family: 'Caviar Dreams';
+    // }
 }
 
 .intro-section div {
-    display: -webkit-inline-box;
+    // display: -webkit-inline-box;
 }
 
 h2 {
     font-family: 'The Bold Font';
     letter-spacing: 1rem;
     font-size: 7rem;
-    opacity: 0.5;
+    // opacity: 0.5;
     margin: 0;
-    margin-bottom: 2rem;
+    // margin-bottom: 2rem;
 }
 
 .intro #first-text {
     margin-right: 0.5rem;
-    color: white;
+    // color: white;
+    colr: #D9B310;
     margin-right: 2rem;
     word-spacing: -1.5rem;
 }
