@@ -5,19 +5,77 @@
     <meta charset="UTF-8">
     <title>Sangeet Manghnani</title>
     <link rel="stylesheet" type="text/css" href="styles/style.css">
-    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.1/flexboxgrid.min.css" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.7.4/jquery.fullPage.min.css" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" type="text/css">
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.7.4/jquery.fullPage.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
     <script type="text/javascript" src="dist/bundle.js"></script>
     </body>
 </head>
 
 <body>
-    <div class="intro-section">
-        <h2 id="hi-text">नमस्ते.</h2>
-        <div class="intro">
-            <h2 id="first-text"> दिस ईज़ </h2>
-            <h2 class="name"> संगीत</h2>
-        </div>
+    <div class="row" id="protfolio-wrapper">
+        <section class="row intro-section">
+            <div class="intro-text col-xs-6">
+                <h2 id="hi-text" class="reveal-text">Hi, There. </h2>
+                <div class="intro">
+                    <h2 id="first-text" class="reveal-text"> This is </h2>
+                    <h2 class="name reveal-text">Sangeet</h2>
+                    <div class="row">
+                        <p id="main-job-desc">Software Engineer</p>
+                        <div class="headerDivider"></div>
+                        <p id="primary-job-desc">Front-End Enthusiast</p>
+                    </div>
+                </div>
+            </div>
+            <div class="intro-image col-xs-6">
+                <img class="reveal-text" src="./assets/images/portfolio-developer.png" alt="developer-image-sangeet" />
+            </div>
+        </section>
+        <section class="row about-me-section">
+            <div class="wow fadeInRight">
+                <p class="about-me-text">my name is <span>sangeet manghnani.</span> i am a software engineer who loves exploring the ui world. i work with <span>IBM software labs.</span> </p>
+            </div>
+        </section>
+        <section>
+            <div class="wow fadeInLeft">Slide 3</div>
+        </section>
+        <section>
+            <div class="wow fadeInRight">Slide 4</div>
+        </section>
     </div>
+
+    <script>
+        $(document).ready(function() {
+
+            //activate wow.js
+            new WOW().init();
+
+            //activate fullpage.js
+            $('#protfolio-wrapper').fullpage({
+                scrollBar: true,
+                navigation: true,
+                navigationTooltips: ['Slide 1', 'Slide 2', 'Slide 3', 'Slide 4'],
+                loopBottom: true,
+                sectionSelector: 'section'
+            });
+
+            //apply color to each section from array
+            int = -1;
+            color_array = ['#fff', '#EF5350', '#9b59b6', '#3498db', '#f1c40f', '#16a085'];
+
+            $('section').each(function() {
+                int++
+                $(this).addClass('grid-item-' + int).css('background-color', color_array[int]);
+            });
+
+
+        });
+    </script>
 </body>
 
 </html>
